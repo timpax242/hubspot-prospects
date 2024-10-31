@@ -1,8 +1,8 @@
-import { getCustomers } from '@/app/lib/actions';
+import { getProspects } from '@/app/lib/actions';
 
-export default async function CustomersTable() {
+export default async function ProspectTable() {
 
-  const customers = await getCustomers();
+  const customers = await getProspects();
 
   return (
     <div className="w-full">

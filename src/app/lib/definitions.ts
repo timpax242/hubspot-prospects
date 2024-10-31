@@ -1,4 +1,4 @@
-export type CustomersTableType =  {
+export type ProspectTableType =  {
   id: string,
   properties: {
     company: string,

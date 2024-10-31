@@ -1,13 +1,13 @@
 'use client';
 
 import { useActionState } from 'react';
-import { createCustomer } from '@/app/lib/actions';
+import { createProspect } from '@/app/lib/actions';
 import Link from 'next/link';
 import { Button } from './button';
 
-export default function CustomerForm() {
+export default function ProspectForm() {
 
-  const [errorMessage, formAction] = useActionState(createCustomer, "");
+  const [errorMessage, formAction] = useActionState(createProspect, "");
 
   return (
     <form action={formAction}>

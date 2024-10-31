@@ -1,12 +1,12 @@
 'use server'
 
-import { CustomersTableType } from '@/app/lib/definitions';
+import { ProspectTableType } from '@/app/lib/definitions';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 
 const PRIVATE_APP_ACCESS = process.env.ACCESS_TOKEN;
 
-export async function getCustomers() {
+export async function getProspects() {
 
   const hubapi = 'https://api.hubapi.com/crm/v3/objects/prospects?properties=company,contact_name,contact_phone,contact_email,sender_email';
   const headers = {
@@ -24,7 +24,7 @@ export async function getCustomers() {
       console.log('Promise resolved and HTTP status is successful');
       const resp = await res.json();
       //await new Promise((resolve) => setTimeout(resolve, 2000));
-      return <CustomersTableType>resp.results;
+      return <ProspectTableType>resp.results;
 
     } else {
       console.error('Promise resolved but HTTP status failed');
@@ -34,13 +34,11 @@ export async function getCustomers() {
   }
 }
 
-export async function createCustomer(
+export async function createProspect(
   currentState: string,
   formData: FormData
 ) {
-
-  console.log(formData);
-
+  
   const hubapi = 'https://api.hubapi.com/crm/v3/objects/prospects';
   const headers = {
     Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
