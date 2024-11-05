@@ -1,7 +1,6 @@
-import { getProspects } from '@/app/lib/actions';
+import { getProspects } from "@/app/lib/actions";
 
 export default async function ProspectTable() {
-
   const customers = await getProspects();
 
   return (
@@ -10,7 +9,6 @@ export default async function ProspectTable() {
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
             <div className="overflow-hidden rounded-md bg-gray-50 p-2 md:pt-0">
-
               <div className="md:hidden">
                 {customers?.map((customer) => (
                   <div
@@ -38,7 +36,9 @@ export default async function ProspectTable() {
                     <div className="flex w-full items-center justify-between border-b py-5">
                       <div className="flex w-1/2 flex-col">
                         <p className="text-xs">Sender</p>
-                        <p className="text-sm text-gray-500">{customer.properties.sender_email}</p>
+                        <p className="text-sm text-gray-500">
+                          {customer.properties.sender_email}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -95,5 +95,5 @@ export default async function ProspectTable() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,18 +1,16 @@
-'use client';
+"use client";
 
-import { useActionState } from 'react';
-import { createProspect } from '@/app/lib/actions';
-import Link from 'next/link';
-import { Button } from './button';
+import { useActionState } from "react";
+import { createProspect } from "@/app/lib/actions";
+import Link from "next/link";
+import { Button } from "./button";
 
 export default function ProspectForm() {
-
   const [errorMessage, formAction] = useActionState(createProspect, "");
 
   return (
     <form action={formAction}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
-
         <div className="mb-4">
           <label htmlFor="company" className="mb-2 block text-sm font-medium">
             Name of the prospect company
@@ -30,7 +28,10 @@ export default function ProspectForm() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="contact_person" className="mb-2 block text-sm font-medium">
+          <label
+            htmlFor="contact_person"
+            className="mb-2 block text-sm font-medium"
+          >
             Contact person for the company
           </label>
           <div className="relative mt-2 rounded-md">
@@ -46,7 +47,10 @@ export default function ProspectForm() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="contact_phone" className="mb-2 block text-sm font-medium">
+          <label
+            htmlFor="contact_phone"
+            className="mb-2 block text-sm font-medium"
+          >
             Contact person&apos;s phone
           </label>
           <div className="relative mt-2 rounded-md">
@@ -62,7 +66,10 @@ export default function ProspectForm() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="contact_email" className="mb-2 block text-sm font-medium">
+          <label
+            htmlFor="contact_email"
+            className="mb-2 block text-sm font-medium"
+          >
             Contact person&apos;s email
           </label>
           <div className="relative mt-2 rounded-md">
@@ -78,7 +85,10 @@ export default function ProspectForm() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="sender_email" className="mb-2 block text-sm font-medium">
+          <label
+            htmlFor="sender_email"
+            className="mb-2 block text-sm font-medium"
+          >
             Your email
           </label>
           <div className="relative mt-2 rounded-md">
@@ -95,9 +105,7 @@ export default function ProspectForm() {
 
         {errorMessage && (
           <div id="error-message" aria-live="polite" aria-atomic="true">
-            <p className="mt-2 text-sm text-red-500">
-              {errorMessage}
-            </p>
+            <p className="mt-2 text-sm text-red-500">{errorMessage}</p>
           </div>
         )}
       </div>
@@ -109,8 +117,10 @@ export default function ProspectForm() {
         >
           Cancel
         </Link>
-        <Button className="button" type="submit">Create customer</Button>
+        <Button className="button" type="submit">
+          Create customer
+        </Button>
       </div>
     </form>
-  )
+  );
 }

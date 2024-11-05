@@ -3,10 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Prospective customers',
-    default: 'Prospective customers',
+    template: "%s | Prospective customers",
+    default: "Prospective customers",
   },
-  description: 'Prospective customers Next.js built with App Router.'
+  description: "Prospective customers Next.js built with App Router.",
 };
 
 export default function RootLayout({
@@ -16,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
