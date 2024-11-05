@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { lusitana } from "@/app/ui/fonts";
 import Link from "next/link";
 import ProspectTable from "@/app/components/prospect-table";
+import { Suspense } from "react";
+import { ProspectsTableSkeleton } from "@/app/ui/skeletons";
 
 export const metadata: Metadata = {
   title: "Prospective customers",
@@ -15,7 +17,9 @@ export default async function Page() {
           Prospective customers
         </h1>
       </div>
-      <ProspectTable />
+      <Suspense fallback={<ProspectsTableSkeleton />}>
+        <ProspectTable />
+      </Suspense>
       <Link className="button" href="/prospects/add">
         Add new prospect
       </Link>
