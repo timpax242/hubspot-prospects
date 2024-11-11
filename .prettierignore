@@ -3,4 +3,4 @@
 **/.hg
 **/node_modules
 **/.dockerignore
-**/.gitkerignore
+**/.gitignore
