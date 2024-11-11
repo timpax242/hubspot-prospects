@@ -118,7 +118,7 @@ export default function ProspectForm() {
           Cancel
         </Link>
         <Button className="button" type="submit">
-          Create customer
+          Create prospect
         </Button>
       </div>
     </form>

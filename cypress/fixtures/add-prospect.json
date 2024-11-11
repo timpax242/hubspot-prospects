@@ -1,0 +1,19 @@
+{
+  "id": "1234567890",
+  "properties": {
+    "company": "Lorem",
+    "contact_email": "info@lorem.com",
+    "contact_name": "Lorem",
+    "contact_phone": "1234567",
+    "hs_createdate": "2024-11-11T13:39:34.473Z",
+    "hs_lastmodifieddate": "2024-11-11T13:39:34.473Z",
+    "hs_object_id": "1234567890",
+    "hs_object_source": "INTEGRATION",
+    "hs_object_source_id": "654321",
+    "hs_object_source_label": "INTEGRATION",
+    "sender_email": "sender@lorem.com"
+  },
+  "createdAt": "2024-11-11T13:39:34.473Z",
+  "updatedAt": "2024-11-11T13:39:34.473Z",
+  "archived": false
+}
